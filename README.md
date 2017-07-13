@@ -14,13 +14,14 @@ Module usage:
       }
 
     # minimal setup, check Inputs to see the different customisation options
-     module "rabbitmq" {
-         source                                = "github.com/grey-systems/terraform-multitier-vpc.git?ref=master"
-         subnet_ids                            = "${var.subnet_ids}"
-         availability_zones                    = "${var.availability_zones}"
-         aws_keypair_name                      = "${var.aws_keypair_name}"
-         environment                           = "${var.environment}"
-  }
+      module "rds-sqlserver" {
+        source               = "github.com/garniev/terraform-aws-rds-mssql.git?ref=master"
+        environment          = "${var.environment}"
+        mssql_admin_username = "${var.sqlserver_db_admin_user}"
+        mssql_admin_password = "${var.sqlserver_db_admin_password}"
+        vpc_id               = "${data.aws_vpc.vpc.id}"
+        vpc_subnet_ids       = ["${var.vpc_private_subnet_ids}"]
+      }
 
 Inputs
 ---------
