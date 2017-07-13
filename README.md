@@ -34,6 +34,7 @@ Inputs
   | rds_allocated_storage | The allocated storage in gigabytes. | `250` | no |
   | rds_instance_class | The instance type of the RDS instance. | `db.m4.large` | no |
   | rds_multi_az | Specifies if the RDS instance is multi-AZ. | `false` | no |
+  | skip_final_snapshot | Determines whether a final DB snapshot is created before the DB instance is deleted. | `false` | no |
   | vpc_cidr_blocks | List of CIDR blocks that will be granted to access to mssql instance. | `<list>` | no |
   | vpc_cidr_blocks_vpn | Additional list of CIDR blocks that will be granted to access to mssql instance. These list is meant to be used in the vpn security group. | `<list>` | no |
   | vpc_id | The VPC identifier where security groups are going to be applied. | - | yes |
