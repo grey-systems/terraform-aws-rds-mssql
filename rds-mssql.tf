@@ -61,3 +61,8 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name    = "${aws_db_subnet_group.default_rds_mssql.id}"
   backup_retention_period = 3
 }
+
+// Identifier of the mssql DB instance.
+output "mssql_id" {
+  value = "${aws_db_instance.default.id}"
+}
