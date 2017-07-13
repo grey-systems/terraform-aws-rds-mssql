@@ -39,6 +39,13 @@ Inputs
   | vpc_id | The VPC identifier where security groups are going to be applied. | - | yes |
   | vpc_subnet_ids | A list of VPC subnet identifiers. | - | yes |
 
+Outputs
+---------
+
+  | Name | Description |
+  |------|-------------|
+  | mssql_id | Identifier of the mssql DB instance. |
+
 
 Contributing
 ------------
