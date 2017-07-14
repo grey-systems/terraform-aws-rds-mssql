@@ -45,8 +45,8 @@ Outputs
 
   | Name | Description |
   |------|-------------|
+  | mssql_address | Address of the mssql DB instance. |
   | mssql_id | Identifier of the mssql DB instance. |
-
 
 Contributing
 ------------
